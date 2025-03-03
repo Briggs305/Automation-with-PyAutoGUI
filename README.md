@@ -1,11 +1,49 @@
-# Automation-with-PyAutoGUI
-Created an automation system that will open Youtube and play a video.
+import pyautogui 
+import time
 
-This Python-based automation system allows you to open YouTube and play a Nathaniel Bassey video automatically. It's a simple yet powerful tool for music lovers who want to quickly listen to some of Nathaniel Bassey's inspiring gospel music or watch HALLELUYAH CHALLENGE without having to manually search for the videos.
+#sleeptime for mouse movement
+time.sleep(9)
 
-Features:
-Opens YouTube in the default web browser.
-Automatically searches for a Nathaniel Bassey video.
-Plays the video as soon as it’s found.
+currentMouseX, currentMouseY = pyautogui.position()
+print(f"Current mouse position: X={currentMouseX}, Y={currentMouseY}")
 
-Thank you.
+#Move mouse code
+pyautogui.moveTo(348, 787)
+
+time.sleep(7)
+#Click code 
+pyautogui.click(348, 787) 
+
+#typescript in Safari
+pyautogui.typewrite('https://www.youtube.com', interval=0.45)
+#press enter to search
+pyautogui.press('enter')
+
+#-------------------------------
+
+#time.sleep(4)
+#Mouse cordiantes for search engine
+
+currentMouseX, currentMouseY = pyautogui.position()
+print(f"Current mouse position: X={currentMouseX}, Y={currentMouseY}")
+
+#Click to search engine
+pyautogui.moveTo(305,93)
+pyautogui.click(294,87)
+
+time.sleep(2)
+#search for video
+pyautogui.typewrite('Nathaniel Bassey', interval=0.55)
+pyautogui.press('enter')
+
+time.sleep(6)
+currentMouseX, currentMouseY = pyautogui.position()
+print(f"Current mouse position: X={currentMouseX}, Y={currentMouseY}")
+
+#click video to play
+time.sleep(4)
+pyautogui.moveTo(225,478)
+pyautogui.click(225,478)
+#time.sleep(6)
+
+#CREATED AND DEVELOPED BY Azane Azariah Kofi.
